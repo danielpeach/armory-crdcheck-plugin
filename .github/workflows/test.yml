@@ -1,0 +1,19 @@
+name: Test Plugin
+on: 
+  repository_dispatch:
+    types: testPlugin
+
+jobs:
+  test:
+    name: Test Plugin
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: set up java
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - uses: danielpeach/test-action@master
+        with: 
+          versions: ${{ toJson(github.event.client_payload) }}
