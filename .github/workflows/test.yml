@@ -14,6 +14,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - uses: danielpeach/test-action@master
+      - uses: danielpeach/plugin-test-runner@main
         with: 
           versions: ${{ toJson(github.event.client_payload) }}
