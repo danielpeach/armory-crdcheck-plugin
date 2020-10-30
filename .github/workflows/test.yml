@@ -20,9 +20,14 @@ jobs:
       - uses: danielpeach/plugin-test-runner@main
         with: 
           versions: ${{ github.event.inputs.payload }}
+      - id: encode_payload
+        env:
+          PAYLOAD: ${{ github.event.inputs.payload }}
+        run: |
+          echo ::set-output name=ENCODED_PAYLOAD::$(echo $PAYLOAD | base64)
       - uses: actions/upload-artifact@v2
         if: always()
         with:
-          name: ${{ github.run_id }}-${{ github.event.inputs.payload }}
+          name: ${{ github.run_id }}-${{ steps.encode_payload.outputs.ENCODED_PAYLOAD }}
           path: "**"
           if-no-files-found: ignore
