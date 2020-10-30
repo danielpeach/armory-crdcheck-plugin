@@ -19,7 +19,7 @@ jobs:
           java-version: 11
       - uses: danielpeach/plugin-test-runner@main
         with: 
-          versions: ${{ toJson(github.event.client_payload) }}
+          versions: ${{ toJson(github.event.inputs.payload) }}
       - uses: actions/upload-artifact@v2
         if: always()
         with:
