@@ -17,3 +17,9 @@ jobs:
       - uses: danielpeach/plugin-test-runner@main
         with: 
           versions: ${{ toJson(github.event.client_payload) }}
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: ${{ github.run_id }}:${{ toJson(github.event.client_payload) }}
+          path: none
+          if-no-files-found: ignore
