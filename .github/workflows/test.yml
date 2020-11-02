@@ -19,4 +19,4 @@ jobs:
           java-version: 11
       - uses: danielpeach/plugin-test-runner@main
         with: 
-          versions: ${{ github.event.inputs.payload }}
+          payload: ${{ github.event.inputs.payload }}
