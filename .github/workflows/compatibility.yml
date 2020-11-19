@@ -21,3 +21,4 @@ jobs:
         with: 
           service: ${{ github.event.client_payload.service }}
           version: ${{ github.event.client_payload.service }}
+          plugin_sha: ${{ github.event.client_payload.sha }}
