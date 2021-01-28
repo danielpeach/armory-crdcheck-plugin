@@ -1,0 +1,3 @@
+name: Armory CRD Check Plugin
+id: Armory.CRDCheck
+testCompatibility: true
