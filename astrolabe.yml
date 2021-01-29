@@ -1,3 +1,7 @@
-name: Armory CRD Check Plugin
-id: Armory.CRDCheck
-testCompatibility: true
+plugin:
+  name: Armory CRD Check Plugin
+  id: Armory.CRDCheck
+  testCompatibility: true
+  manageDependencies: true
+  metadata:
+    url: https://github.com/danielpeach/external-accounts
