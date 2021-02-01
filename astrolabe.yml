@@ -1,7 +1,7 @@
 plugin:
   name: Armory CRD Check Plugin
   id: Armory.CRDCheck
-  testCompatibility: true
+  testCompatibility: false
   manageDependencies: true
   metadata:
     org: danielpeach
