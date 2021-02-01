@@ -4,4 +4,5 @@ plugin:
   testCompatibility: true
   manageDependencies: true
   metadata:
-    url: https://github.com/danielpeach/external-accounts
+    org: danielpeach
+    repo: external-accounts
