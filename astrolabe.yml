@@ -1,8 +1,8 @@
 plugin:
   name: Armory CRD Check Plugin
   id: Armory.CRDCheck
-  testCompatibility: true
-  manageDependencies: true
+  testCompatibility: false
+  manageDependencies: false
   metadata:
     org: danielpeach
     repo: external-accounts
